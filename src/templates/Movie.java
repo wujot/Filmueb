@@ -1,14 +1,14 @@
 package templates;
 
 public class Movie {
-    String title;
-    String director;
-    int productionYear;
-    String type;
-    String description;
-    double rating;
+    private String title;
+    private String director;
+    private int productionYear;
+    private String type;
+    private String description;
+    private double rating;
 
-    Movie() {
+    public Movie() {
 
     }
 

@@ -1,47 +1,64 @@
 package main;
 
 import templates.Actor;
+import templates.ConsoleDataReader;
 import templates.Movie;
 import templates.Series;
+
+import java.util.Scanner;
 
 public class Filmueb {
 
     public static void main(String[] args) {
 
-        /* App version 0.1
-        create objects from each template
-        print it at the end*/
+        // App version 0.2
 
-        Movie movie1 = new Movie("Pitbull. Nowe Porzadki.", "Patryk Vega", 2016,
-                "Drama", "Policemen of two Warsaw commands join forces in the fight against the " +
-                "Mokotowska Group.", 7.3);
+        Scanner sc = new Scanner(System.in);
 
-        Series series1 = new Series("Wataha", 2, 12, "Bogumil Lipski", "Thriller",
-                "Captain Wiktor Rebrow is trying to unravel the mystery of the bombing in which his " +
-                        "friends from the Border Guard in Bieszczady died.", 7.9);
+        ConsoleDataReader console = new ConsoleDataReader();
 
-        Actor actor1 = new Actor("Boguslaw", "Linda", "Poland");
+        // create movie
+        Movie movie = console.createMovie(sc);
 
-        print(movie1);
-        print(series1);
-        print(actor1);
+        // create tv series
+        Series tvSeries = console.createTvSeries(sc);
+
+        // create actor
+        Actor actor = console.createActor(sc);
+
+        sc.close();
+
+        // print each object
+        print(movie);
+        print(tvSeries);
+        print(actor);
     }
 
+    // printing methods
+
     public static void print(Movie movie){
-        System.out.println("Movie: ");
-        System.out.println("-----------------------------------------------------------------------------------------");
-        System.out.printf("Title: %s\nDirector: %s\nYear of production: %d\nType: %s\nDescription: %s\nRating: %.1f\n",
-                movie.getTitle(), movie.getDirector(), movie.getProductionYear(), movie.getType(),
-                movie.getDescription(), movie.getRating());
+        if(movie == null){
+            System.out.println("Could not create a movie object.");
+        }else {
+            System.out.println("Movie: ");
+            System.out.println("-----------------------------------------------------------------------------------------");
+            System.out.printf("Title: %s\nDirector: %s\nYear of production: %d\nType: %s\nDescription: %s\nRating: %.1f\n",
+                    movie.getTitle(), movie.getDirector(), movie.getProductionYear(), movie.getType(),
+                    movie.getDescription(), movie.getRating());
+        }
         System.out.println("");
     }
 
     public static void print(Series series){
-        System.out.println("Series: ");
-        System.out.println("-----------------------------------------------------------------------------------------");
-        System.out.printf("Title: %s\nSeries: %d\nEpisods: %d\nProducer: %s\nType: %s\nDescription: %s\nRating: %.1f\n",
-                series.getTitle(), series.getSeries(), series.getEpisodes(), series.getProducer(), series.getType(),
-                series.getDescription(), series.getRating());
+        if(series == null) {
+            System.out.println("Could not create a tv series object.");
+        }else {
+            System.out.println("Series: ");
+            System.out.println("-----------------------------------------------------------------------------------------");
+            System.out.printf("Title: %s\nSeries: %d\nEpisods: %d\nProducer: %s\nType: %s\nDescription: %s\nRating: %.1f\n",
+                    series.getTitle(), series.getSeries(), series.getEpisodes(), series.getProducer(), series.getType(),
+                    series.getDescription(), series.getRating());
+        }
         System.out.println("");
     }
 

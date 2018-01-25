@@ -1,11 +1,11 @@
 package templates;
 
 public class Actor {
-    String firstName;
-    String secondName;
-    String country;
+    private String firstName;
+    private String secondName;
+    private String country;
 
-    Actor() {
+    public Actor() {
 
     }
 

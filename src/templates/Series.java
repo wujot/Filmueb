@@ -1,15 +1,15 @@
 package templates;
 
 public class Series {
-    String title;
-    int series;
-    int episodes;
-    String producer;
-    String type;
-    String description;
-    double rating;
+    private String title;
+    private int series;
+    private int episodes;
+    private String producer;
+    private String type;
+    private String description;
+    private double rating;
 
-    Series() {
+    public Series() {
 
     }
 
