@@ -78,4 +78,18 @@ public class Series {
     public void setRating(double rating) {
         this.rating = rating;
     }
+
+    @Override
+    public String toString() {
+        return "Series:\n" +
+                "---------------------------------------------------------\n" +
+                "Title: " + title + "\n" +
+                "Series: " + series + "\n" +
+                "Episodes: " + episodes + "\n" +
+                "Producer: " + producer + "\n" +
+                "Type: " + type + "\n" +
+                "Description: " + description + "\n" +
+                "Rating: " + rating + "\n" +
+                "---------------------------------------------------------\n";
+    }
 }

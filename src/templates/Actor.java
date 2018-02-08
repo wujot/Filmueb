@@ -38,4 +38,14 @@ public class Actor {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    @Override
+    public String toString() {
+        return "Actor: " + "\n" +
+                "---------------------------------------------------------\n" +
+                "First name: " + firstName + "\n" +
+                "Second name: " + secondName + "\n" +
+                "Country: " + country + "\n" +
+                "---------------------------------------------------------\n";
+    }
 }

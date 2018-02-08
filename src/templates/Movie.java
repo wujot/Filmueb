@@ -1,5 +1,7 @@
 package templates;
 
+import java.util.Arrays;
+
 public class Movie {
     private String title;
     private String director;
@@ -67,5 +69,18 @@ public class Movie {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie:\n" +
+                "---------------------------------------------------------\n" +
+                "Title: " + title + "\n" +
+                "Director: " + director + "\n" +
+                "Production Year: " + productionYear + "\n" +
+                "Type: " + type + "\n" +
+                "Description: " + description + "\n" +
+                "Rating: " + rating + "\n" +
+                "---------------------------------------------------------\n";
     }
 }
