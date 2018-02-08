@@ -1,6 +1,6 @@
-package templates;
+package data;
 
-public class Series {
+public class TvSeries {
     private String title;
     private int series;
     private int episodes;
@@ -9,11 +9,11 @@ public class Series {
     private String description;
     private double rating;
 
-    public Series() {
+    public TvSeries() {
 
     }
 
-    public Series(String title, int series, int episodes, String producer, String type, String description, double rating) {
+    public TvSeries(String title, int series, int episodes, String producer, String type, String description, double rating) {
         this.title = title;
         this.series = series;
         this.episodes = episodes;
@@ -93,3 +93,4 @@ public class Series {
                 "---------------------------------------------------------\n";
     }
 }
+

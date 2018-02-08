@@ -1,6 +1,4 @@
-package templates;
-
-import java.util.Arrays;
+package data;
 
 public class Movie {
     private String title;
@@ -84,3 +82,4 @@ public class Movie {
                 "---------------------------------------------------------\n";
     }
 }
+

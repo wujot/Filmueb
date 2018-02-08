@@ -1,4 +1,4 @@
-package templates;
+package data;
 
 public class Actor {
     private String firstName;
